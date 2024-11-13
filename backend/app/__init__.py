@@ -1,6 +1,6 @@
 from flask import Flask
 from .routes import main_routes  # Import routes from routes.py
-from .config import Config       # type: ignore # Import config settings
+from config import Config       # type: ignore # Import config settings
 
 def create_app():
     app = Flask(__name__)

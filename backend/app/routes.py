@@ -1,7 +1,12 @@
-from flask import Blueprint, request, jsonify
+from flask import Blueprint, request, jsonify, render_template
 from .services import process_user_input  # Import service functions
 
 main_routes = Blueprint('main', __name__)
+
+
+@main_routes.route('/')
+def home():
+    return render_template('home.html')
 
 @main_routes.route('/chat', methods=['POST'])
 def chat():
